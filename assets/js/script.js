@@ -26,10 +26,20 @@ function saveNote(event) {
     const userInput = textArea.value
     console.log(userInput)
     //store in Local storage - store to array - object, hopefully
-    localStorage.setItem('notes', JSON.stringify(userInput));
+    localStorage.setItem(time, JSON.stringify(userInput));
+    
 }
-
-
+function init() {
+$('#textarea-9am').val(localStorage.getItem('9am')) 
+$('#textarea-10am').val(localStorage.getItem('10am')) 
+$('#textarea-11am').val(localStorage.getItem('11am')) 
+$('#textarea-12pm').val(localStorage.getItem('12pm')) 
+$('#textarea-1pm').val(localStorage.getItem('1pm')) 
+$('#textarea-2pm').val(localStorage.getItem('2pm')) 
+$('#textarea-3pm').val(localStorage.getItem('3pm')) 
+$('#textarea-4pm').val(localStorage.getItem('4pm')) 
+$('#textarea-5pm').val(localStorage.getItem('5pm')) 
+}
 
 function createTimeRow() {
     // Cycle through array
@@ -79,13 +89,5 @@ function createTimeRow() {
 
 createTimeRow()
 
-//console.log(currentTime)
+init()
 
-
-
-// var button1 = document.getElementById("button-9am")
-
-// button1.addEventListener("click", function() {
-
-//     console.log("clicked!")
-// })//
