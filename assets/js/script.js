@@ -29,16 +29,28 @@ function saveNote(event) {
     localStorage.setItem(time, JSON.stringify(userInput));
     
 }
+
+//Function to return items from storage to page - very manual, may try to automate
 function init() {
-$('#textarea-9am').val(localStorage.getItem('9am')) 
-$('#textarea-10am').val(localStorage.getItem('10am')) 
-$('#textarea-11am').val(localStorage.getItem('11am')) 
-$('#textarea-12pm').val(localStorage.getItem('12pm')) 
-$('#textarea-1pm').val(localStorage.getItem('1pm')) 
-$('#textarea-2pm').val(localStorage.getItem('2pm')) 
-$('#textarea-3pm').val(localStorage.getItem('3pm')) 
-$('#textarea-4pm').val(localStorage.getItem('4pm')) 
-$('#textarea-5pm').val(localStorage.getItem('5pm')) 
+    var nineAmSlot = JSON.parse(localStorage.getItem("9am"));
+    document.getElementById('textarea-9am').textContent = nineAmSlot
+    var tenAmSlot = JSON.parse(localStorage.getItem("10am"));
+    document.getElementById('textarea-10am').textContent = tenAmSlot
+    var elevenAmSlot = JSON.parse(localStorage.getItem("11am"));
+    document.getElementById('textarea-11am').textContent = elevenAmSlot
+    var twelvePmSlot = JSON.parse(localStorage.getItem("12pm"));
+    document.getElementById('textarea-12pm').textContent = twelvePmSlot
+    var onePmSlot = JSON.parse(localStorage.getItem("1pm"));
+    document.getElementById('textarea-1pm').textContent = onePmSlot
+    var twoPmSlot = JSON.parse(localStorage.getItem("2pm"));
+    document.getElementById('textarea-2pm').textContent = twoPmSlot
+    var threePmSlot = JSON.parse(localStorage.getItem("3pm"));
+    document.getElementById('textarea-3pm').textContent = threePmSlot
+    var fourPmSlot = JSON.parse(localStorage.getItem("4pm"));
+    document.getElementById('textarea-4pm').textContent = fourPmSlot
+    var fivePmSlot = JSON.parse(localStorage.getItem("4pm"));
+    document.getElementById('textarea-5pm').textContent = fivePmSlot
+
 }
 
 function createTimeRow() {
