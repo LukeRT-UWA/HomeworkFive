@@ -48,7 +48,7 @@ function init() {
     document.getElementById('textarea-3pm').textContent = threePmSlot
     var fourPmSlot = JSON.parse(localStorage.getItem("4pm"));
     document.getElementById('textarea-4pm').textContent = fourPmSlot
-    var fivePmSlot = JSON.parse(localStorage.getItem("4pm"));
+    var fivePmSlot = JSON.parse(localStorage.getItem("5pm"));
     document.getElementById('textarea-5pm').textContent = fivePmSlot
 
 }
