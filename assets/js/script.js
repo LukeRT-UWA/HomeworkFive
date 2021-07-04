@@ -16,21 +16,22 @@ function setBackgroundClass() {
 
         let input = document.getElementById("textarea-" + time)
 
-        if(time24 > currentHour) {
-            input.setAttribute("class", "future") }
-
-            else if (time24 == currentHour) {input.setAttribute("class", "present")}
-
-            else {input.setAttribute("class", "past")}
-        }
-
         // if(time24 > currentHour) {
-        //     input.classList.add("future") }
+        //     input.setAttribute("class", "future") }
 
-        //     else if (time24 == currentHour) {input.classList.add("present")}
+        //     else if (time24 == currentHour) {input.setAttribute("class", "present")}
 
-        //     else {input.classList.add("past")}
+        //     else {input.setAttribute("class", "past")}
         // }
+
+        
+        if(time24 > currentHour) {
+            input.classList.add("future") }
+
+            else if (time24 == currentHour) {input.classList.add("present")}
+
+            else {input.classList.add("past")}
+        }
 
     }
 
@@ -129,4 +130,4 @@ createTimeRow()
 
 init()
 
-// setBackgroundClass()
+setBackgroundClass()
