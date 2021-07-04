@@ -1,10 +1,14 @@
+//Moment time for top of page
 const currentTime = moment()
 $("#currentDay").text(currentTime.format("dddd, MMMM Do"));
-const currentHour = moment().format("HH")
-console.log(currentHour)
-console.log(timeNotes)
 
+//Moment time to determine background colour classes
+const currentHour = moment().format("HH")
+
+//Location to place createTimeRow()
 const container = document.getElementById("time-container");
+
+
 
 //set background class
 function setBackgroundClass() {
@@ -13,18 +17,10 @@ function setBackgroundClass() {
         const timeNote = timeNotes[index];
         time24 = timeNote.time24
         time = timeNote.time
-
+        //Specify input elements 
         let input = document.getElementById("textarea-" + time)
 
-        // if(time24 > currentHour) {
-        //     input.setAttribute("class", "future") }
-
-        //     else if (time24 == currentHour) {input.setAttribute("class", "present")}
-
-        //     else {input.setAttribute("class", "past")}
-        // }
-
-        
+        //Add class based upon time
         if(time24 > currentHour) {
             input.classList.add("future") }
 
@@ -41,25 +37,21 @@ function saveNote(event) {
     event.preventDefault();
     //Point to button
     const button = event.target;
-    //Ensure correct button selected
-    console.log(event.target)
     //grab time from button ID
     const buttonId = button.id;
-    console.log(buttonId)
     //remove "button" leaving just time e.g. "9am" or "11am"
     const time = buttonId.slice(7);
-    console.log(time)
-    ;
     //grab user input
     const textArea = document.getElementById('textarea-' + time);
     const userInput = textArea.value
-    console.log(userInput)
     //store in Local storage - store to array - object, hopefully
     localStorage.setItem(time, JSON.stringify(userInput));
     
 }
 
 //Function to return items from storage to page - very manual, may try to automate
+// Parse item, grab it and assign it to variable
+// Place at element
 function init() {
     var nineAmSlot = JSON.parse(localStorage.getItem("9am"));
     document.getElementById('textarea-9am').textContent = nineAmSlot
@@ -116,8 +108,7 @@ function createTimeRow() {
         button.addEventListener("click", saveNote);
         button.textContent = "💾"
         inputBlock.appendChild(button)
-        // append class to input based upon moment time
-        
+             
 
         //append entire timeDiv to container so it can be displayed on the page
         container.appendChild(timeDiv)
@@ -126,8 +117,9 @@ function createTimeRow() {
     }
 }
 
+//Create page elements
 createTimeRow()
-
+//Render saved JSON
 init()
-
+//Set background classes
 setBackgroundClass()
