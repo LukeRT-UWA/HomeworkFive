@@ -1,6 +1,6 @@
 # HomeworkFive
 
-![Website Screenshot](assets/images/websitescreenshot.jpg)
+![Website Screenshot](assets/images/websitescreenshot.JPG)
 
 https://lukert-uwa.github.io/HomeworkFive/
 
