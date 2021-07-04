@@ -9,9 +9,6 @@ const container = document.getElementById("time-container");
 //set background class
 function setBackgroundClass() {
 //cycloe through array and grab times
-
-
-
     for (let index = 0; index < timeNotes.length; index++) {
         const timeNote = timeNotes[index];
         time24 = timeNote.time24
@@ -26,6 +23,14 @@ function setBackgroundClass() {
 
             else {input.setAttribute("class", "past")}
         }
+
+        // if(time24 > currentHour) {
+        //     input.classList.add("future") }
+
+        //     else if (time24 == currentHour) {input.classList.add("present")}
+
+        //     else {input.classList.add("past")}
+        // }
 
     }
 
@@ -124,4 +129,4 @@ createTimeRow()
 
 init()
 
-setBackgroundClass()
+// setBackgroundClass()
