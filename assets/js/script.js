@@ -5,8 +5,10 @@ console.log(timeNotes)
 
 const container = document.getElementById("time-container");
 
+//function to set colour/class based upon moment time
 
 
+//Function to save content of textarea 
 function saveNote(event) {
 
     event.preventDefault();
