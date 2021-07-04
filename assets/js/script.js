@@ -1,12 +1,33 @@
 const currentTime = moment()
 $("#currentDay").text(currentTime.format("dddd, MMMM Do"));
-
+const currentHour = moment().format("HH")
+console.log(currentHour)
 console.log(timeNotes)
 
 const container = document.getElementById("time-container");
 
-//function to set colour/class based upon moment time
+//set background class
+function setBackgroundClass() {
+//cycloe through array and grab times
 
+
+
+    for (let index = 0; index < timeNotes.length; index++) {
+        const timeNote = timeNotes[index];
+        time24 = timeNote.time24
+        time = timeNote.time
+
+        let input = document.getElementById("textarea-" + time)
+
+        if(time24 > currentHour) {
+            input.setAttribute("class", "future") }
+
+            else if (time24 == currentHour) {input.setAttribute("class", "present")}
+
+            else {input.setAttribute("class", "past")}
+        }
+
+    }
 
 //Function to save content of textarea 
 function saveNote(event) {
@@ -87,12 +108,10 @@ function createTimeRow() {
         button.setAttribute('class', "btn btn-primary saveBtn")
         button.setAttribute('id', "button-" + time)
         button.addEventListener("click", saveNote);
-
         button.textContent = "💾"
         inputBlock.appendChild(button)
         // append class to input based upon moment time
-       
-
+        
 
         //append entire timeDiv to container so it can be displayed on the page
         container.appendChild(timeDiv)
@@ -105,3 +124,4 @@ createTimeRow()
 
 init()
 
+setBackgroundClass()

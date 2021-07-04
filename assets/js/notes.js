@@ -2,47 +2,47 @@ var timeNotes = [
 
     {
         time: "9am",
-        message : ""
-
+        message : "",
+        time24 : 09
     },
     {
         time: "10am",
-        message : ""
-
+        message : "",
+        time24 : 10
     },
     {
         time: "11am",
-        message : ""
-
+        message : "",
+        time24 : 11
     },
     {
         time: "12pm",
-        message : ""
-
+        message : "",
+        time24 : 12
     },
     {
         time: "1pm",
-        message : ""
-
+        message : "",
+        time24 : 13
     },
     {
         time: "2pm",
-        message : ""
-
+        message : "",
+        time24 : 14
     },
     {
         time: "3pm",
-        message : ""
-
+        message : "",
+        time24 : 15
     },
     {
         time: "4pm",
-        message : ""
-
+        message : "",
+        time24 : 16
     },
     {
         time: "5pm",
-        message : ""
-
+        message : "",
+        time24 : 17
     },
 ]
