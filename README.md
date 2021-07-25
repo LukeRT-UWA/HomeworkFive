@@ -2,7 +2,7 @@
 
 ![Website Screenshot](assets/images/websitescreenshot.JPG)
 
-https://lukert-uwa.github.io/HomeworkFive/
+https://lukert-uwa.github.io/Work-Day-Scheduler/
 
 ## Criteria
 
